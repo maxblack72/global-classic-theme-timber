@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    {% block head %}
+        {{ function('wp_head') }}
+    {% endblock %}
+</head>
+
+<body class="{{ function('body_class') }}">
+
+    {{ function('wp_body_open') }}
+
+    {% block header %}{% endblock %}
+
+    <main class="main-container">
+        {% block content %}
+            {{ __('No content found.', 'global-classic-theme-timber') }}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+        {{ function('wp_footer') }}
+    {% endblock %}
+
+</body>
+</html>
