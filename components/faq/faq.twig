@@ -1,0 +1,3 @@
+{% if items is not empty %}
+<faq-accordion items="{{ items|json_encode|e('html_attr') }}"></faq-accordion>
+{% endif %}

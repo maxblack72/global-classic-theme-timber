@@ -5,4 +5,7 @@
         <h1>{{ post.title }}</h1>
         <div>{{ post.content }}</div>
     </article>
+    
+    {{ include('components/faq/faq.twig', { items: faq_items }) }}   
 {% endblock %}
+
